@@ -14,9 +14,29 @@ namespace PawProj.Classes
 
         public WebsiteCategory(string webname)
         {
+            /*Available websites and categories
+              1. Social media : Tiktok, Instagram, Whatsapp
+              2. E-Commerce : Amazon, Etsy, Emag
+              3. Statistics : Insse, Statista, TradingEconomics 
+             
+             */
             switch(webname)
             {
-                //case TO DO: ASSIGN ID BASED ON NAME
+                case "Tiktok":
+                case "Instagram":
+                case "Whatsapp":
+                    Id = 1; break;
+
+                case "Amazon":
+                case "Etsy":
+                case "Emag":
+                    Id = 2; break;
+
+                case "Insse":
+                case "Statista":
+                case "TradingEconomics":
+                    Id = 3; break;
+
             }
             Visits = new List<Visit>();
 

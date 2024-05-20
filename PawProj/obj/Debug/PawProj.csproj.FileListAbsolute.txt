@@ -7,3 +7,5 @@ C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.csproj.GenerateResourc
 C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.csproj.CoreCompileInputs.cache
 C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.exe
 C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.pdb
+C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.LogForm.resources
+C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.MainForm.resources
