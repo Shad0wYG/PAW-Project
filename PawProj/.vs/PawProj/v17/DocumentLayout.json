@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|c:\\users\\anee young\\paw-project\\pawproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|c:\\users\\anee young\\paw-project\\pawproj\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|solutionrelative:classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|C:\\Users\\Anee Young\\PAW-Project\\PawProj\\classes\\visit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|solutionrelative:classes\\visit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|C:\\Users\\Anee Young\\PAW-Project\\PawProj\\classes\\websitecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|solutionrelative:classes\\websitecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|C:\\Users\\Anee Young\\PAW-Project\\PawProj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7756C3F5-3E96-481F-A572-7283C3C93986}|PawProj.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,23 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Classes\\User.cs",
+              "RelativeDocumentMoniker": "Classes\\User.cs",
+              "ToolTip": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Classes\\User.cs",
+              "RelativeToolTip": "Classes\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T12:13:41.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebsiteCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Classes\\WebsiteCategory.cs",
+              "RelativeDocumentMoniker": "Classes\\WebsiteCategory.cs",
+              "ToolTip": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Classes\\WebsiteCategory.cs",
+              "RelativeToolTip": "Classes\\WebsiteCategory.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T12:13:28.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Visit.cs",
+              "DocumentMoniker": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Classes\\Visit.cs",
+              "RelativeDocumentMoniker": "Classes\\Visit.cs",
+              "ToolTip": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Classes\\Visit.cs",
+              "RelativeToolTip": "Classes\\Visit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T12:13:10.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Anee Young\\PAW-Project\\PawProj\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T12:52:02.106Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-11T12:52:02.106Z"
             }
           ]
         }
