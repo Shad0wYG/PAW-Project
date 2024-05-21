@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\Util.cs" />
     <Compile Include="Classes\Visit.cs" />
     <Compile Include="Classes\WebsiteCategory.cs" />
     <Compile Include="LogForm.cs">

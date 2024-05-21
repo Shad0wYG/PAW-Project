@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PawProj.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,23 @@ namespace PawProj
 {
     public partial class MainForm : Form
     {
-
+        private Visit Visit {  get; set; }
         public MainForm()
         {
+            Visit = new Visit();
             InitializeComponent();
         }
 
         private void logBtn_Click(object sender, EventArgs e)
         {
             LogForm logForm = new LogForm();
+            User user = new User();
+            logForm.User = user;
             if (logForm.ShowDialog() == DialogResult.OK) 
             {
-                //add data
+                Visit.User = logForm.User; 
+
+
             }
         }
     }

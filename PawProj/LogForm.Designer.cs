@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.lDateOfBirth = new System.Windows.Forms.Label();
             this.lUserName = new System.Windows.Forms.Label();
             this.lFullName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.tbFullName = new System.Windows.Forms.TextBox();
             this.lWebsite = new System.Windows.Forms.Label();
             this.btnLogCancel = new System.Windows.Forms.Button();
-            this.lExplainer = new System.Windows.Forms.Label();
             this.btnLogOK = new System.Windows.Forms.Button();
+            this.cbWebsite = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpDOB
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(324, 44);
-            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(331, 27);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpDOB.CalendarFont = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDOB.Location = new System.Drawing.Point(324, 44);
+            this.dtpDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(331, 27);
+            this.dtpDOB.TabIndex = 0;
             // 
             // lDateOfBirth
             // 
@@ -84,26 +83,19 @@
             this.lFullName.Text = "User\'s Full Name";
             this.lFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tbUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(324, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 22);
-            this.textBox1.TabIndex = 6;
+            this.tbUserName.Location = new System.Drawing.Point(324, 108);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(331, 22);
+            this.tbUserName.TabIndex = 6;
             // 
-            // textBox2
+            // tbFullName
             // 
-            this.textBox2.Location = new System.Drawing.Point(324, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(324, 252);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(331, 22);
-            this.textBox3.TabIndex = 8;
+            this.tbFullName.Location = new System.Drawing.Point(324, 173);
+            this.tbFullName.Name = "tbFullName";
+            this.tbFullName.Size = new System.Drawing.Size(331, 22);
+            this.tbFullName.TabIndex = 7;
             // 
             // lWebsite
             // 
@@ -127,17 +119,6 @@
             this.btnLogCancel.Text = "Cancel";
             this.btnLogCancel.UseVisualStyleBackColor = true;
             // 
-            // lExplainer
-            // 
-            this.lExplainer.AutoSize = true;
-            this.lExplainer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lExplainer.Location = new System.Drawing.Point(38, 315);
-            this.lExplainer.Name = "lExplainer";
-            this.lExplainer.Size = new System.Drawing.Size(691, 15);
-            this.lExplainer.TabIndex = 12;
-            this.lExplainer.Text = "*Available Websites: Tiktok, Instagram, Whatsapp, Amazon, Etsy, Emag, Insse, Stat" +
-    "ista, TradingEconomics";
-            // 
             // btnLogOK
             // 
             this.btnLogOK.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -148,25 +129,46 @@
             this.btnLogOK.TabIndex = 13;
             this.btnLogOK.Text = "OK";
             this.btnLogOK.UseVisualStyleBackColor = true;
+            this.btnLogOK.Click += new System.EventHandler(this.btnLogOK_Click);
+            // 
+            // cbWebsite
+            // 
+            this.cbWebsite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWebsite.FormattingEnabled = true;
+            this.cbWebsite.Items.AddRange(new object[] {
+            "Amazon",
+            "Emag",
+            "Etsy",
+            "INSSE",
+            "Instagram",
+            "Statista",
+            "TikTok",
+            "TradingEconomics",
+            "WhatsApp"});
+            this.cbWebsite.Location = new System.Drawing.Point(324, 248);
+            this.cbWebsite.Name = "cbWebsite";
+            this.cbWebsite.Size = new System.Drawing.Size(331, 26);
+            this.cbWebsite.TabIndex = 14;
             // 
             // LogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbWebsite);
             this.Controls.Add(this.btnLogOK);
-            this.Controls.Add(this.lExplainer);
             this.Controls.Add(this.btnLogCancel);
             this.Controls.Add(this.lWebsite);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbFullName);
+            this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.lFullName);
             this.Controls.Add(this.lUserName);
             this.Controls.Add(this.lDateOfBirth);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDOB);
             this.Name = "LogForm";
             this.Text = "Log the Website Access Information";
+            this.Load += new System.EventHandler(this.LogForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,16 +176,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Label lDateOfBirth;
         private System.Windows.Forms.Label lUserName;
         private System.Windows.Forms.Label lFullName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbUserName;
+        private System.Windows.Forms.TextBox tbFullName;
         private System.Windows.Forms.Label lWebsite;
         private System.Windows.Forms.Button btnLogCancel;
-        private System.Windows.Forms.Label lExplainer;
         private System.Windows.Forms.Button btnLogOK;
+        private System.Windows.Forms.ComboBox cbWebsite;
     }
 }

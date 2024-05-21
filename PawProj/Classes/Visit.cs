@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace PawProj.Classes
 {
-    internal class Visit
+    public class Visit
     {
         public static int Id = 0;
         public DateTime Timestamp { get; set; }
         public User User { get; set; }
+        public string WebsiteName { get; set; }
 
         public Visit() 
         {
-            Id++;
             Timestamp = DateTime.Now;
         }
 
-        public Visit(User user)
+        public Visit(User user, string websiteName) : this() 
         {
             Id++;
             User = user;
+            WebsiteName = websiteName;
             Timestamp = DateTime.Now;
         }   
     }

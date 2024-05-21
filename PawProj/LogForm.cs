@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PawProj.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,40 @@ using System.Windows.Forms;
 
 namespace PawProj
 {
-    public partial class LogForm : Form
+    public partial class LogForm : Form 
     {
+        public User User { get; set; }
+        public Visit visit { get; set; }
+        WebsiteCategory one = new WebsiteCategory(1);
+        WebsiteCategory two = new WebsiteCategory(2);
+        WebsiteCategory three = new WebsiteCategory(3);
+
         public LogForm()
         {
             InitializeComponent();
+        }
+
+        private void LogForm_Load(object sender, EventArgs e)
+        {
+            if (User != null) 
+            {
+                tbUserName.Text = User.UserName;
+                tbFullName.Text = User.FullName;
+                dtpDOB.Value = User.DateOfBirth;
+            }
+        }
+
+        private void btnLogOK_Click(object sender, EventArgs e)
+        {
+            User.UserName = tbUserName.Text;
+            User.FullName = tbFullName.Text;
+            User.DateOfBirth = dtpDOB.Value;
+            string website = cbWebsite.Text;
+
+            visit = new Visit(User, website);
+            User.VisitHistory.Add(visit);
+
+            Util.AddVisit(visit, one, two, three);
         }
     }
 }
