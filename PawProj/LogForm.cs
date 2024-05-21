@@ -15,9 +15,9 @@ namespace PawProj
     {
         public User User { get; set; }
         public Visit visit { get; set; }
-        WebsiteCategory one = new WebsiteCategory(1);
-        WebsiteCategory two = new WebsiteCategory(2);
-        WebsiteCategory three = new WebsiteCategory(3);
+        public WebsiteCategory one = new WebsiteCategory(1);
+        public WebsiteCategory two = new WebsiteCategory(2);
+        public WebsiteCategory three = new WebsiteCategory(3);
 
         public LogForm()
         {
