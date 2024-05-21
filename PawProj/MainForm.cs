@@ -13,17 +13,20 @@ namespace PawProj
 {
     public partial class MainForm : Form
     {
-        User User {  get; set; }
+        public User User {  get; set; }
         Visit Visit {  get; set; }
-        WebsiteCategory one = new WebsiteCategory(1);
-        WebsiteCategory two = new WebsiteCategory(2);
-        WebsiteCategory three = new WebsiteCategory(3);
+        public WebsiteCategory one = new WebsiteCategory(1);
+        public WebsiteCategory two = new WebsiteCategory(2);
+        public WebsiteCategory three = new WebsiteCategory(3);
 
         public MainForm()
         {
             Visit = new Visit();
             InitializeComponent();
         }
+
+
+
 
         private void logBtn_Click(object sender, EventArgs e)
         {
@@ -44,6 +47,11 @@ namespace PawProj
         private void btnViewData_Click(object sender, EventArgs e)
         {
             ViewData viewData = new ViewData();
+            viewData.user = User;
+            viewData.visit = Visit;
+            viewData.one = one;
+            viewData.two = two;
+            viewData.three = three;
             viewData.ShowDialog();
         }
     }

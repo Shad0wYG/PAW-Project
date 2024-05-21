@@ -46,5 +46,39 @@ namespace PawProj
 
             Util.AddVisit(visit, one, two, three);
         }
+
+        private void tbFullName_Validating(object sender, CancelEventArgs e)
+        {
+            if(tbFullName.Text.Length < 3)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError((Control)sender, "Name too Short!");
+            }
+
+            foreach(char c in tbFullName.Text)
+                if(!((c >= 'A' && c <= 'Z' ) || (c>='a' && c<='z')))
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError((Control)sender, "Name can have only letters!");
+                }
+        }
+
+        private void tbUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbUserName.Text.Length < 0) 
+            {
+                e.Cancel = true;
+                errorProvider2.SetError((Control)sender, "This field cannot be empty!");
+            }
+        }
+
+        private void cbWebsite_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbWebsite.Text))
+            {
+                e.Cancel= true;
+                errorProvider3.SetError((Control)sender, "This field cannot be empty!");
+            }
+        }
     }
 }

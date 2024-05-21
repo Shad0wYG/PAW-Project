@@ -9,3 +9,4 @@ C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.exe
 C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.pdb
 C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.LogForm.resources
 C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.MainForm.resources
+C:\Users\Anee Young\PAW-Project\PawProj\obj\Debug\PawProj.ViewData.resources

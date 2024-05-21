@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.lDateOfBirth = new System.Windows.Forms.Label();
             this.lUserName = new System.Windows.Forms.Label();
@@ -38,6 +39,12 @@
             this.btnLogCancel = new System.Windows.Forms.Button();
             this.btnLogOK = new System.Windows.Forms.Button();
             this.cbWebsite = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpDOB
@@ -89,6 +96,7 @@
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(331, 22);
             this.tbUserName.TabIndex = 6;
+            this.tbUserName.Validating += new System.ComponentModel.CancelEventHandler(this.tbUserName_Validating);
             // 
             // tbFullName
             // 
@@ -96,6 +104,7 @@
             this.tbFullName.Name = "tbFullName";
             this.tbFullName.Size = new System.Drawing.Size(331, 22);
             this.tbFullName.TabIndex = 7;
+            this.tbFullName.Validating += new System.ComponentModel.CancelEventHandler(this.tbFullName_Validating);
             // 
             // lWebsite
             // 
@@ -150,6 +159,19 @@
             this.cbWebsite.Name = "cbWebsite";
             this.cbWebsite.Size = new System.Drawing.Size(331, 26);
             this.cbWebsite.TabIndex = 14;
+            this.cbWebsite.Validating += new System.ComponentModel.CancelEventHandler(this.cbWebsite_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
             // 
             // LogForm
             // 
@@ -169,6 +191,9 @@
             this.Name = "LogForm";
             this.Text = "Log the Website Access Information";
             this.Load += new System.EventHandler(this.LogForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +211,8 @@
         private System.Windows.Forms.Button btnLogCancel;
         private System.Windows.Forms.Button btnLogOK;
         private System.Windows.Forms.ComboBox cbWebsite;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }
