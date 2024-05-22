@@ -56,7 +56,7 @@ namespace PawProj
             }
 
             foreach(char c in tbFullName.Text)
-                if(!((c >= 'A' && c <= 'Z' ) || (c>='a' && c<='z')))
+                if(!((c >= 'A' && c <= 'Z' ) || (c>='a' && c<='z') || c ==' '))
                 {
                     e.Cancel = true;
                     errorProvider1.SetError((Control)sender, "Name can have only letters!");

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PawProj.Classes
 {
+    [Serializable]
     public class WebsiteCategory
     {
         public int Id { get; set; }

@@ -51,6 +51,11 @@ namespace PawProj
             viewData.two = two;
             viewData.three = three;
             viewData.ShowDialog();
+
+
+            one = viewData.one;
+            two = viewData.two;
+            three = viewData.three;
         }
     }
 }

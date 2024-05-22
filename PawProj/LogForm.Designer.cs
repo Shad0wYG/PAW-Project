@@ -119,6 +119,7 @@
             // 
             // btnLogCancel
             // 
+            this.btnLogCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogCancel.Location = new System.Drawing.Point(12, 385);
@@ -126,7 +127,7 @@
             this.btnLogCancel.Size = new System.Drawing.Size(83, 53);
             this.btnLogCancel.TabIndex = 11;
             this.btnLogCancel.Text = "Cancel";
-            this.btnLogCancel.UseVisualStyleBackColor = true;
+            this.btnLogCancel.UseVisualStyleBackColor = false;
             // 
             // btnLogOK
             // 
@@ -177,6 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cbWebsite);
             this.Controls.Add(this.btnLogOK);

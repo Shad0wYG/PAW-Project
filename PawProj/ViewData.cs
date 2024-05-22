@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,15 +27,6 @@ namespace PawProj
 
         private void addItem(WebsiteCategory category) 
         {
-            //foreach (var visit in category.Visits)
-            //{
-            //    ListViewItem lvi = new ListViewItem(visit.WebsiteName);
-            //    lvi.SubItems.Add(user.UserName);
-            //    lvi.SubItems.Add(user.FullName);
-            //    lvi.SubItems.Add(user.DateOfBirth.ToString());
-            //    lvi.Tag = visit;
-            //    lvShow.Items.Add(lvi);
-            //}
 
             foreach(var visit in category.Visits)
             {
@@ -88,6 +81,37 @@ namespace PawProj
             {
                 Util.DeleteVisit((Visit)lvShow.SelectedItems[0].Tag, one, two, three);
             }
+        }
+
+        private void serializeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using(FileStream fs = File.Create(sfd.FileName))
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(fs, one);
+                    bf.Serialize(fs, two);
+                    bf.Serialize(fs, three);
+                }
+            }
+        }
+
+        private void deserializeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream fs = File.OpenRead(ofd.FileName))
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    one = (WebsiteCategory)bf.Deserialize(fs);
+                    DisplayInfo();
+                }
+            }
+
+
         }
     }
 }
