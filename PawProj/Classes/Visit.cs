@@ -10,18 +10,19 @@ namespace PawProj.Classes
     {
         public static int Id = 0;
         public DateTime Timestamp { get; set; }
-        public User User { get; set; }
         public string WebsiteName { get; set; }
+        public List<User> UserHistory { get; set; }
 
         public Visit() 
         {
             Timestamp = DateTime.Now;
+            UserHistory = new List<User>();
         }
 
         public Visit(User user, string websiteName) : this() 
         {
             Id++;
-            User = user;
+            UserHistory.Add(user);
             WebsiteName = websiteName;
             Timestamp = DateTime.Now;
         }   

@@ -17,6 +17,11 @@ namespace PawProj.Classes
             Visits = new List<Visit>();
         }
 
+        //public void addVisit(Visit visit)
+        //{
+        //    //Id = Util.findCat(visit.WebsiteName);
+        //    Visits.Add(visit);
+        //}
 
 
 

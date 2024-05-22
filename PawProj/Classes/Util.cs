@@ -30,19 +30,36 @@ namespace PawProj.Classes
             }
         }
 
-        public static void AddVisit(Visit visit, WebsiteCategory one, WebsiteCategory two, WebsiteCategory three) 
+        public static void AddVisit(Visit visit, WebsiteCategory one, WebsiteCategory two, WebsiteCategory three)
         {
             int c = findCat(visit.WebsiteName);
-            switch(c)
+            switch (c)
             {
-                case 1: 
+                case 1:
                     one.Visits.Add(visit);
                     break;
                 case 2:
                     two.Visits.Add(visit);
                     break;
-                case 3: 
+                case 3:
                     three.Visits.Add(visit);
+                    break;
+            }
+        }
+
+        public static void DeleteVisit(Visit visit, WebsiteCategory one, WebsiteCategory two, WebsiteCategory three)
+        {
+            int c = findCat(visit.WebsiteName);
+            switch (c)
+            {
+                case 1:
+                    one.Visits.Remove(visit);
+                    break;
+                case 2:
+                    two.Visits.Remove(visit);
+                    break;
+                case 3:
+                    three.Visits.Remove(visit);
                     break;
             }
         }

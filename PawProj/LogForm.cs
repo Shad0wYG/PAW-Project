@@ -15,9 +15,9 @@ namespace PawProj
     {
         public User User { get; set; }
         public Visit visit { get; set; }
-        //public WebsiteCategory one = new WebsiteCategory(1);
-        //public WebsiteCategory two = new WebsiteCategory(2);
-        //public WebsiteCategory three = new WebsiteCategory(3);
+        public WebsiteCategory one = new WebsiteCategory(1);
+        public WebsiteCategory two = new WebsiteCategory(2);
+        public WebsiteCategory three = new WebsiteCategory(3);
 
         public LogForm()
         {
@@ -42,9 +42,9 @@ namespace PawProj
             string website = cbWebsite.Text;
 
             visit = new Visit(User, website);
-            User.VisitHistory.Add(visit);
 
-            Util.AddVisit(visit, MainForm 
+            Util.AddVisit(visit, one, two, three);
+
         }
 
         private void tbFullName_Validating(object sender, CancelEventArgs e)

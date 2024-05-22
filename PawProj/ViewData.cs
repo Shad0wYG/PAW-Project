@@ -25,15 +25,29 @@ namespace PawProj
 
         private void addItem(WebsiteCategory category) 
         {
-            foreach (var visit in category.Visits)
+            //foreach (var visit in category.Visits)
+            //{
+            //    ListViewItem lvi = new ListViewItem(visit.WebsiteName);
+            //    lvi.SubItems.Add(user.UserName);
+            //    lvi.SubItems.Add(user.FullName);
+            //    lvi.SubItems.Add(user.DateOfBirth.ToString());
+            //    lvi.Tag = visit;
+            //    lvShow.Items.Add(lvi);
+            //}
+
+            foreach(var visit in category.Visits)
             {
-                ListViewItem lvi = new ListViewItem(visit.WebsiteName);
-                lvi.SubItems.Add(user.UserName);
-                lvi.SubItems.Add(user.FullName);
-                lvi.SubItems.Add(user.DateOfBirth.ToString());
-                lvi.Tag = visit;
-                lvShow.Items.Add(lvi);
+                foreach(var user in visit.UserHistory)
+                {
+                    ListViewItem lvi = new ListViewItem(visit.WebsiteName);
+                    lvi.SubItems.Add(user.UserName);
+                    lvi.SubItems.Add(user.FullName);
+                    lvi.SubItems.Add(user.DateOfBirth.ToString());
+                    lvi.Tag = visit;
+                    lvShow.Items.Add(lvi);
+                }
             }
+            
         }
 
         private void DisplayInfo()
@@ -55,10 +69,16 @@ namespace PawProj
         {
             if(rbEdit.Checked) 
             {
+                visit = (Visit)lvShow.SelectedItems[0].Tag;
+                user = new User();
                 LogForm logForm = new LogForm();
+                logForm.User = user;
+                logForm.one = one;
+                logForm.two = two;
+                logForm.three = three;
                 if (logForm.ShowDialog() == DialogResult.OK) 
                 {
-                    lvShow.Items.Remove(lvShow.SelectedItems[0]);
+                    Util.DeleteVisit(visit, one, two, three);
                     
                 }
 
@@ -66,7 +86,7 @@ namespace PawProj
 
             if(rbDelete.Checked)
             {
-
+                Util.DeleteVisit((Visit)lvShow.SelectedItems[0].Tag, one, two, three);
             }
         }
     }
