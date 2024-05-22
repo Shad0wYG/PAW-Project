@@ -50,5 +50,24 @@ namespace PawProj
             DisplayInfo();
 
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if(rbEdit.Checked) 
+            {
+                LogForm logForm = new LogForm();
+                if (logForm.ShowDialog() == DialogResult.OK) 
+                {
+                    lvShow.Items.Remove(lvShow.SelectedItems[0]);
+                    
+                }
+
+            }
+
+            if(rbDelete.Checked)
+            {
+
+            }
+        }
     }
 }
