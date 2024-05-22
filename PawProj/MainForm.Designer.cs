@@ -32,6 +32,7 @@
             this.logBtn = new System.Windows.Forms.Button();
             this.btnViewData = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logBtn
@@ -65,9 +66,21 @@
             this.label1.Font = new System.Drawing.Font("Wide Latin", 19.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(656, 42);
+            this.label1.Size = new System.Drawing.Size(636, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "Internet Provider App";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(652, 364);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(136, 53);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainForm
             // 
@@ -75,6 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewData);
             this.Controls.Add(this.logBtn);
@@ -90,6 +104,7 @@
         private System.Windows.Forms.Button logBtn;
         private System.Windows.Forms.Button btnViewData;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

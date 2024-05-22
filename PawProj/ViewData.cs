@@ -74,12 +74,14 @@ namespace PawProj
                     Util.DeleteVisit(visit, one, two, three);
                     
                 }
+                
 
             }
 
             if(rbDelete.Checked)
             {
-                Util.DeleteVisit((Visit)lvShow.SelectedItems[0].Tag, one, two, three);
+                for(int i=0; i<lvShow.SelectedItems.Count;i++)
+                    Util.DeleteVisit((Visit)lvShow.SelectedItems[i].Tag, one, two, three);
             }
         }
 

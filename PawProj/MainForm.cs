@@ -57,5 +57,10 @@ namespace PawProj
             two = viewData.two;
             three = viewData.three;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

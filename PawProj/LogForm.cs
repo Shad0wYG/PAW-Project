@@ -80,5 +80,14 @@ namespace PawProj
                 errorProvider3.SetError((Control)sender, "This field cannot be empty!");
             }
         }
+
+        private void dtpDOB_Validating(object sender, CancelEventArgs e)
+        {
+            if (DateTime.Now < dtpDOB.Value)
+            {
+                e.Cancel = true;
+                errorProvider4.SetError((Control)sender, "Date of birth is in the future?????");
+            }
+        }
     }
 }
